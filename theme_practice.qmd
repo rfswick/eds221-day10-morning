@@ -1,0 +1,26 @@
+---
+title: "EDS221: Day 10"
+author: "Rachel Swick"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  labs(title = "Penguins!") +
+  theme(title = element_text(size = 16, color = "purple"),
+        plot.background = element_rect(fill = "black"),
+        panel.background = element_rect(color = "orange",
+                                        fill = "white"),
+        axis.title.x = element_text(color = "red"),
+        axis.title.y = element_text(color = "pink"),
+        panel.grid.major = element_line(color = "cyan"),
+        panel.grid.minor = element_line(color = "magenta"),
+        axis.text = element_text(color = "green"))
+```
+
