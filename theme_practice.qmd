@@ -7,6 +7,7 @@ format: html
 ```{r}
 library(tidyverse)
 library(palmerpenguins)
+library(bigwave)
 ```
 
 ```{r}
@@ -23,4 +24,22 @@ ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
         panel.grid.minor = element_line(color = "magenta"),
         axis.text = element_text(color = "green"))
 ```
+
+
+```{r}
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme_colorful()
+```
+
+
+
+
+
+
+
+
+
+
+
 
